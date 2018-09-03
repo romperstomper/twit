@@ -1,4 +1,5 @@
 import twitter
+
 consumer_key='JLhu3rnTDDKn23DPUun8mw'
 consumer_secret='JKZ3BEnTo25UfSrEDlfsR4iOr0V7jLq8hKCzbJPeOI'
 
@@ -11,4 +12,6 @@ api = twitter.Api(consumer_key=consumer_key,
                   access_token_secret=access_secret)
 
 
-print(api.VerifyCredentials())
+#print(api.VerifyCredentials())
+tweets = api.GetUserTimeline('420980366')
+print(tweets)
