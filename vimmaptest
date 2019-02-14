@@ -1,0 +1,2 @@
+#:exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'redraw!'<cr>
+:exec 'silent :!echo "python3 -m unittest %" > testrun' \| :exec 'ls'<cr>
