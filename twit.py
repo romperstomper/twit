@@ -14,10 +14,14 @@ def readtweets():
         access_token_secret=access_secret)
 
     tweets = api.GetUserTimeline('420980366')
-    return [i.AsDict()['text'] for i in tweets]
+    return tweets
+
 
 def main():
-    print(readtweets())
+    tweets = readtweets()
+    pprint.pprint(tweets)
+    formatted_tweets = [i.AsDict()['text'].replace('"', '') for i in tweets]
+    #pprint.pprint(formatted_tweets)
 
 
 if __name__ == '__main__':
